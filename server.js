@@ -27,11 +27,20 @@ app.use(function (req, res, next) {
 //initialize routes
 require('./controllers/routes')(app);
 
+db.sequelize.sync({ force: true }).then(function () {
+	app.listen(port, function () {
+		console.log(`Server is listening on port ${port}`);
+		app.emit('serverStarted');
+	});
+});
+
+/*
 db.sequelize.sync({ force: false })
 	.then(function () {
 		var server = app.listen(port);
 		console.log(`Server is listening on ${port}`);
 	})
 	.catch(console.error);
+*/
 
 module.exports = app; // for testing

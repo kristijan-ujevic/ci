@@ -5,6 +5,11 @@ var should = chai.should();
 
 chai.use(chaiHttp);
 
+before(done => {
+	server.on('serverStarted', () => {
+		done();
+	});
+});
 
 describe('Test', function () {
 	it('should easily pass or fail', function (done) {
