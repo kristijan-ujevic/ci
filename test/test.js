@@ -16,6 +16,7 @@ describe('Test', function () {
 		chai.request(server)
 			.get('/auser')
 			.end(function (err, res) {
+				res.should.have.status(200);
 				done();
 			});
 	});
