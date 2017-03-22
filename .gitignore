@@ -1,0 +1,15 @@
+# jetbrains metadata
+.idea
+
+#Visual Studio Code metadata
+.vscode
+
+# node modules
+node_modules
+
+# local config
+config/dev.json
+config/test.json
+
+#upload folders
+public/uploads

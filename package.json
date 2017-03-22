@@ -1,0 +1,40 @@
+{
+  "name": "ci_test",
+  "version": "1.0.0",
+  "description": "CI",
+  "main": "server.js",
+  "author": "Sam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "config": "^1.20.1",
+    "express": "^4.13.4",
+    "lodash": "^4.17.4",
+    "morgan": "^1.7.0",
+    "pg": "^6.1.4",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=dev nodemon server.js",
+    "test": "mocha --timeout 10000"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristijan-ujevic/ci.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kristijan-ujevic/ci/issues"
+  },
+  "homepage": "https://github.com/kristijan-ujevic/ci#readme"
+}

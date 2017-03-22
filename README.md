@@ -1,2 +1,0 @@
-# ci
-Testing continuous integration
