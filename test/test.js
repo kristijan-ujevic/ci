@@ -14,7 +14,7 @@ before(done => {
 describe('Test', function () {
 	it('should easily pass or fail', function (done) {
 		chai.request(server)
-			.get('/user')
+			.get('/auser')
 			.end(function (err, res) {
 				done();
 			});
