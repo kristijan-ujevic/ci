@@ -1,6 +1,3 @@
-install: true
-test: false
-
 sudo: required
 
 language: node_js
