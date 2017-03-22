@@ -9,6 +9,3 @@ before_install:
   - docker build -t test -f Dockerfile.test .
   - docker ps -a
   - docker run test /bin/sh -c "/etc/init.d/postgresql start; npm test;"
-
-script:
-  - npm test
