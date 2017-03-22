@@ -1,4 +1,5 @@
 install: true
+test: true
 
 sudo: required
 
