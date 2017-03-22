@@ -9,7 +9,6 @@ node_modules
 
 # local config
 config/dev.json
-config/test.json
 
 #upload folders
 public/uploads
