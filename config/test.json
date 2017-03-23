@@ -5,8 +5,8 @@
     "database": {
         "port": 5432,
         "database_name": "test_db",
-        "user": "test_user",
-        "password": "1234",
+        "user": "postgres",
+        "password": "",
         "logMode": false,
         "options": {
             "host": "localhost",

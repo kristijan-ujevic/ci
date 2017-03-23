@@ -1,5 +1,5 @@
 #FROM debian:jessie
-FROM ubuntu:xenial
+FROM ubuntu:16.04
 
 RUN apt-get update
 RUN apt-get -y install sudo
@@ -8,14 +8,7 @@ RUN apt-get -y install curl
 #install NodeJS and npm
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
-#RUN apt-get -y install npm
-#RUN apt-get -y install build-essential
-
-#install Postgress and create a test database and test_user
-RUN apt-get -y install postgresql-9.5
-RUN /etc/init.d/postgresql start && sudo -u postgres /usr/bin/psql -c "CREATE DATABASE test_db;"
-RUN /etc/init.d/postgresql start && sudo -u postgres /usr/bin/psql -c "CREATE USER test_user WITH PASSWORD '1234'; GRANT ALL PRIVILEGES ON DATABASE "test_db" to test_user;"
-
+RUN apt-get -y install build-essential
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
