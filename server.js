@@ -9,7 +9,7 @@ const config = require('config');
 const port = config.server.port;
 const db = require('./models');
 
-//don't show the log when it is test
+//don't show the log when it is test   ...
 if (config.util.getEnv('NODE_ENV') !== 'test') {
 	app.use(morgan('combined'));
 }
